@@ -12,7 +12,14 @@ function Work({ names, tasks }: any) {
           return (
             <button
               onClick={() => {
-                setNameSelected(name);
+                if (nameSelected != '') {
+
+                  setNameSelected("");
+                } else {
+                  setNameSelected(name);
+                }
+
+
               }}
             >
 
@@ -30,6 +37,7 @@ function Work({ names, tasks }: any) {
           );
         })}
       </div>
+
       {nameSelected === "Ruan" ? (
         <Activies name={nameSelected} tasks={tasks[0]} />
       ) : (
