@@ -12,11 +12,24 @@ function Work({ names, tasks }: any) {
           return (
             <button
               onClick={() => {
-                setNameSelected(name);
+                if (nameSelected != '') {
+
+                  setNameSelected("");
+                } else {
+                  setNameSelected(name);
+                }
+
+
               }}
             >
+
+
               <span></span>
               <span></span>
+              {nameSelected == '' ? (
+                <img src="https://ih0.redbubble.net/image.618369215.1083/flat,1000x1000,075,f.u2.jpg" alt="avatar"></img >
+              ) : ("")}
+
               <span></span>
               <span></span>
               {name}
@@ -24,6 +37,7 @@ function Work({ names, tasks }: any) {
           );
         })}
       </div>
+
       {nameSelected === "Ruan" ? (
         <Activies name={nameSelected} tasks={tasks[0]} />
       ) : (
@@ -39,6 +53,7 @@ function Work({ names, tasks }: any) {
       ) : (
         ""
       )}
+
     </div>
   );
 }

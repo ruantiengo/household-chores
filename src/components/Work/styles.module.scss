@@ -18,10 +18,21 @@
     justify-content: center;
     overflow: hidden;
     box-sizing: border-box;
-    height: 150px;
+    height: 600px;
     background-color: var(--primary);
+    img{
+      height: 80px;
+      top: 25%; 
+      position:absolute;
+      left: 0;
+      right: 0;
+      margin-left:auto;
+      margin-right:auto
+      
+    }
     button {
-      background: none;
+      background: #00000030;
+      
       border: 0;
       width: 30%;
       text-align: center;
@@ -33,10 +44,11 @@
       color: #03e9f4;
       text-decoration: none;
       text-transform: uppercase;
-      transition: 0.5s;
+      transition: all .5s linear;
       letter-spacing: 4px;
       overflow: hidden;
       margin-right: 50px;
+      
 
       &:hover {
         background: #03e9f4;
@@ -152,6 +164,7 @@
       button {
         width: 90%;
       }
+      
       button:nth-child(1) {
         padding-left: 0;
       }
