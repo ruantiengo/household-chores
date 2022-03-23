@@ -12,9 +12,11 @@ function Work({ names, tasks }: any) {
           return (
             <button
               onClick={() => {
-                if (nameSelected != '') {
-
+                setNameSelected(name);
+                if (nameSelected === name) {
                   setNameSelected("");
+
+
                 } else {
                   setNameSelected(name);
                 }
