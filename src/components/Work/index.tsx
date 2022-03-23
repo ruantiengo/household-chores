@@ -1,8 +1,9 @@
 import styles from "./styles.module.scss";
 
 import React, { useState } from "react";
+import Activies from "./Activities/activies";
 
-function Work({ names }: any) {
+function Work({ names, tasks }: any) {
   const [nameSelected, setNameSelected] = useState("");
   return (
     <div className={styles.container}>
@@ -23,9 +24,21 @@ function Work({ names }: any) {
           );
         })}
       </div>
-      {nameSelected === "Ruan" ? "Ruan" : ""}
-      {nameSelected === "Thiago" ? "Thiago" : ""}
-      {nameSelected === "João" ? "João" : ""}
+      {nameSelected === "Ruan" ? (
+        <Activies name={nameSelected} tasks={tasks[0]} />
+      ) : (
+        ""
+      )}
+      {nameSelected === "Thiago" ? (
+        <Activies name={nameSelected} tasks={tasks[1]} />
+      ) : (
+        ""
+      )}
+      {nameSelected === "João" ? (
+        <Activies name={nameSelected} tasks={tasks[2]} />
+      ) : (
+        ""
+      )}
     </div>
   );
 }
